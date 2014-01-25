@@ -1,0 +1,813 @@
+{
+  "title": "AngularJS",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "3": {
+      "title": "Build",
+      "id": 81,
+      "ideas": {
+        "1": {
+          "title": "mit grunt",
+          "id": 97
+        },
+        "2": {
+          "title": "in gruntFile.js",
+          "id": 108,
+          "ideas": {
+            "1": {
+              "title": "Tasks laden",
+              "id": 110
+            },
+            "2": {
+              "title": "Configuration erstellen",
+              "id": 111
+            },
+            "3": {
+              "title": "Tasks registrieren",
+              "id": 112
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
+        },
+        "3": {
+          "title": "Was ist der Job",
+          "id": 133,
+          "attr": {
+            "style": {
+              "background": "#DCDCDC"
+            },
+            "collapsed": true
+          },
+          "ideas": {
+            "1": {
+              "title": "JS mit Lint und Hint überprüfen",
+              "id": 134
+            },
+            "2": {
+              "title": "LESS nach CSS umwandeln",
+              "id": 135
+            },
+            "3": {
+              "title": "Tests ausführen",
+              "id": 136
+            },
+            "4": {
+              "title": "Distribution erstellen",
+              "id": 137
+            },
+            "5": {
+              "title": "Abhängigkeiten aus IVY holen",
+              "id": 138
+            }
+          }
+        }
+      },
+      "attr": {
+        "style": {
+          "background": "#E0E0E0"
+        },
+        "collapsed": true
+      }
+    },
+    "4": {
+      "title": "Begriffe",
+      "id": 83,
+      "ideas": {
+        "1": {
+          "title": "Scopes",
+          "id": 2,
+          "ideas": {
+            "1": {
+              "title": "Root Scope",
+              "id": 3,
+              "ideas": {
+                "1": {
+                  "title": "ein Root pro Angular-App",
+                  "id": 6,
+                  "attr": {
+                    "style": {
+                      "background": "#E0E0E0"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {
+                  "background": "#E0E0E0"
+                },
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "Hierarchie",
+              "id": 4,
+              "ideas": {
+                "1": {
+                  "title": "Scope-Creating Directives erzeugen Child Scopes",
+                  "id": 7,
+                  "attr": {
+                    "style": {
+                      "background": "#E0E0E0"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Hierarchie folgt dem DOM-Tree",
+                  "id": 8,
+                  "attr": {
+                    "style": {
+                      "background": "#E0E0E0"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Lebenszyklus und Sichtbarkeit der Scopes am DOM-Tree gekoppelt",
+                  "id": 9,
+                  "attr": {
+                    "style": {
+                      "background": "#E0E0E0"
+                    }
+                  }
+                },
+                "4": {
+                  "title": "Sichtbarkeit im Scope",
+                  "id": 13,
+                  "ideas": {
+                    "1": {
+                      "title": "Lesender Zugriff: wenn etwas im aktuellen Scope nicht gefunden wird, dann wird im Parent nachgesehen",
+                      "id": 14,
+                      "attr": {
+                        "style": {
+                          "background": "#E0E0E0"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Schreibender Zugriff: auch wenn der Parent einen Wert hat, bei Zuweisung wird der Wert im aktuellen Scope neu angelegt!!",
+                      "id": 15,
+                      "ideas": {
+                        "1": {
+                          "title": "Deswegen: bei ng-model immer erst einen Wert suchen und dann eines der Attribute beschreiben",
+                          "id": 16,
+                          "ideas": {
+                            "1": {
+                              "title": "ng-model='kunde.name'",
+                              "id": 18,
+                              "attr": {
+                                "style": {
+                                  "background": "#E0E0E0"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {
+                  "background": "#E0E0E0"
+                },
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "Scopes werden von Angular automatisch erzeugt. Es gibt mehrere Arten sie zu verwenden:",
+              "id": 10,
+              "ideas": {
+                "1": {
+                  "title": "ng-model: die hier referenzierten Daten werden im Scope gesucht",
+                  "id": 11,
+                  "attr": {
+                    "style": {
+                      "background": "#E0E0E0"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Inject: durch DI. z.B. kann der Controller sich den Scope injecten lassen",
+                  "id": 12,
+                  "attr": {
+                    "style": {
+                      "background": "#E0E0E0"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {
+                  "background": "#E0E0E0"
+                },
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Events",
+              "id": 19,
+              "attr": {
+                "style": {
+                  "background": "#E0E0E0"
+                },
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "$emit\nEvent wird Richtung Root geschickt",
+                  "id": 23
+                },
+                "2": {
+                  "title": "$broadcast\nEvent wird Richtung Blätter geschickt",
+                  "id": 24,
+                  "ideas": {}
+                },
+                "3": {
+                  "title": "$on\nhört auf einen Event",
+                  "id": 26
+                },
+                "4": {
+                  "title": "Beispiel:\n$scope.$emit('myEvent')\n$scope.$on('myEvent', function(event) {});",
+                  "id": 27,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div>Beispiel:</div><div>$scope.$emit('myEvent')</div><div>$scope.$on('myEvent', function(event) {});</div>"
+                    },
+                    "style": {
+                      "background": "#E0E0E0"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#E0E0E0"
+            },
+            "collapsed": true
+          }
+        },
+        "2": {
+          "title": "Controller",
+          "id": 21,
+          "ideas": {
+            "1": {
+              "title": "Sind besondere constructor functions, die Daten und Methoden im $scope registrieren, damit sie von den Views verwendet werden können.",
+              "id": 79
+            },
+            "2": {
+              "title": "müssen beim Module registriert werden",
+              "id": 80
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
+        },
+        "3": {
+          "title": "Views",
+          "id": 20,
+          "ideas": {
+            "1": {
+              "title": "werden mit HTML erstellt",
+              "id": 29
+            },
+            "2": {
+              "title": "können Stück für Stück mit Angular-Direktiven angereichert werden",
+              "id": 30
+            },
+            "3": {
+              "title": "sollten nur Deklarativ verwendet werden, nicht imperativ",
+              "id": 31,
+              "ideas": {
+                "1": {
+                  "title": "konsequente Nutzung der Models, Scopes und Controller",
+                  "id": 32
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
+        },
+        "4": {
+          "title": "Modules",
+          "id": 22,
+          "ideas": {
+            "1": {
+              "title": "Modules sind die DI-Container von Angular",
+              "id": 33,
+              "ideas": {
+                "1": {
+                  "title": "in Modules werden injectbare Elemente definiert",
+                  "id": 35,
+                  "ideas": {
+                    "2": {
+                      "title": "Es gibt verschiedene Arten von Beans",
+                      "id": 44,
+                      "ideas": {
+                        "1": {
+                          "title": "Constant",
+                          "id": 45,
+                          "ideas": {
+                            "1": {
+                              "title": "module.constant('MAX_LEN', 100)",
+                              "id": 53
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {
+                              "background": "#E0E0E0"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "Variable / Value",
+                          "id": 46,
+                          "ideas": {
+                            "1": {
+                              "title": "module.value('car', new Car())",
+                              "id": 54
+                            },
+                            "2": {
+                              "title": "registriertes Objekt kann selber nicht per DI bedient werden",
+                              "id": 56
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {
+                              "background": "#E0E0E0"
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "Service",
+                          "id": 47,
+                          "ideas": {
+                            "1": {
+                              "title": "module.service (....)",
+                              "id": 57,
+                              "attr": {
+                                "attachment": {
+                                  "contentType": "text/html",
+                                  "content": "<div><br></div>module.service('car', Car);<div><br></div><div>var Car = function(engine) {</div><div>&nbsp; this.engine = engine;</div><div>}</div>"
+                                },
+                                "style": {
+                                  "background": "#E0E0E0"
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "es muss eine constructor function für ein Objekt übergeben werden",
+                              "id": 58
+                            },
+                            "3": {
+                              "title": "wird in der Praxis kaum eingesetzt. Nur für bereits vorhandene constructor functions",
+                              "id": 59
+                            }
+                          },
+                          "attr": {
+                            "style": {
+                              "background": "#E0E0E0"
+                            },
+                            "collapsed": true
+                          }
+                        },
+                        "4": {
+                          "title": "Factory",
+                          "id": 48,
+                          "ideas": {
+                            "2": {
+                              "title": "module.factory(...)",
+                              "id": 61,
+                              "attr": {
+                                "attachment": {
+                                  "contentType": "text/html",
+                                  "content": "module.factory('car', function(engine) {<div>&nbsp; var ps = engine.ps;</div><div><br><div>&nbsp; return {&nbsp;</div><div>&nbsp; &nbsp; getPS : function() { return ps; }<br><div>});</div></div></div>"
+                                },
+                                "style": {
+                                  "background": "#E0E0E0"
+                                }
+                              }
+                            },
+                            "12": {
+                              "title": "Es muss eine beliebige Funktion übergeben werden, die ein Objekt zurück gibt.",
+                              "id": 60
+                            }
+                          },
+                          "attr": {
+                            "style": {
+                              "background": "#E0E0E0"
+                            }
+                          }
+                        },
+                        "5": {
+                          "title": "Provider",
+                          "id": 49,
+                          "ideas": {
+                            "1": {
+                              "title": "jetzt wird es kompliziert.  Hier werden funktionen registriert, die ein Objekt mit einer $get Methode zurücksliefern müssen. Diese $get Methode wird aufgerufen, um die eigentliche Instanz zu erzeugen.",
+                              "id": 62
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {
+                              "background": "#E0E0E0"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "0.5": {
+                      "title": "Es werden \"Rezepte\" zur Objekterzeugung registriert",
+                      "id": 50,
+                      "ideas": {
+                        "1": {
+                          "title": "Modules übernehmen die Instantiierung und die Verbindung",
+                          "id": 51
+                        },
+                        "2": {
+                          "title": "Objekte werden genau einmal erzeugt (Singletons)",
+                          "id": 52
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {
+                      "background": "#E0E0E0"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "jedes Modul kann abhängig zu anderen Modules sein",
+                  "id": 36,
+                  "ideas": {
+                    "1": {
+                      "title": "Alle definierten Elemente kommen in einen grossen Namensraum",
+                      "id": 75
+                    },
+                    "2": {
+                      "title": "ein Child Module kann so ein Element eines Parent-Modules überschreiben",
+                      "id": 76
+                    }
+                  },
+                  "attr": {
+                    "style": {
+                      "background": "#E0E0E0"
+                    },
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Eine Angular-App (ng-app) hat Zugriff auf genau ein Module",
+                  "id": 38,
+                  "attr": {
+                    "style": {
+                      "background": "#E0E0E0"
+                    }
+                  }
+                },
+                "5": {
+                  "title": "Was machen all die Methoden auf Modul?",
+                  "id": 77,
+                  "ideas": {
+                    "1": {
+                      "title": "jede Menge Utility-Functions, die Elemente in anderen Standardelementen registrieren unter Verwendung von DI.\nz.B. Controller, Filter, etc.",
+                      "id": 78
+                    }
+                  }
+                },
+                "1.5": {
+                  "title": "Module haben einen Lifecycle",
+                  "id": 63,
+                  "ideas": {
+                    "1": {
+                      "title": "config Phase",
+                      "id": 64,
+                      "ideas": {
+                        "1": {
+                          "title": "ist nur für Provider interessant.\nFactory, Service, etc. lassen sich nicht nachträglich konfigurieren",
+                          "id": 67
+                        },
+                        "2": {
+                          "title": "module.config(.....)",
+                          "id": 68
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "run Phase",
+                      "id": 65,
+                      "ideas": {
+                        "1": {
+                          "title": "Konfiguration zur Run Phase. Alle Provider sind vollständig erzeugt und können injected werden",
+                          "id": 69
+                        },
+                        "2": {
+                          "title": "module.run(...)",
+                          "id": 70,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "module.run(function($rootScope) {<div>&nbsp; $rootScope.appStarted = new Date();</div><div>});</div>"
+                            },
+                            "style": {
+                              "background": "#E0E0E0"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {
+                      "background": "#E0E0E0"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {
+                  "background": "#E0E0E0"
+                },
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {
+          "background": "#E0E0E0"
+        }
+      }
+    },
+    "5": {
+      "title": "Projektsetup",
+      "id": 99,
+      "ideas": {
+        "1": {
+          "title": "Dependencies",
+          "id": 100,
+          "ideas": {
+            "1": {
+              "title": "package.json",
+              "id": 101
+            },
+            "2": {
+              "title": "npm install",
+              "id": 107
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
+        },
+        "2": {
+          "title": "grunt",
+          "id": 102,
+          "ideas": {
+            "1": {
+              "title": "gruntFile.js",
+              "id": 103
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
+        },
+        "3": {
+          "title": "Was gehört das alles rein",
+          "id": 118,
+          "ideas": {
+            "1": {
+              "title": "Site",
+              "id": 119,
+              "ideas": {
+                "1": {
+                  "title": "index.html",
+                  "id": 120
+                },
+                "2": {
+                  "title": "partials",
+                  "id": 121
+                },
+                "3": {
+                  "title": "js",
+                  "id": 122,
+                  "ideas": {
+                    "1": {
+                      "title": "controller",
+                      "id": 123
+                    },
+                    "2": {
+                      "title": "services",
+                      "id": 124
+                    },
+                    "3": {
+                      "title": "utils",
+                      "id": 132
+                    }
+                  }
+                },
+                "4": {
+                  "title": "css/less",
+                  "id": 130
+                },
+                "5": {
+                  "title": "images",
+                  "id": 131
+                }
+              },
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "das sind die Sourcen in einer Form, dass sie direkt ausgeführt werden können. Notfalls so strukturiert, dass die IDE Generatorjobs wie LESS-&gt;CSS selber ausführen kann."
+                },
+                "style": {
+                  "background": "#E0E0E0"
+                }
+              }
+            },
+            "2": {
+              "title": "library",
+              "id": 126
+            },
+            "3": {
+              "title": "target/dist",
+              "id": 127
+            },
+            "4": {
+              "title": "configs",
+              "id": 128
+            },
+            "5": {
+              "title": "tests",
+              "id": 129
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#DCDCDC"
+            },
+            "collapsed": true
+          }
+        }
+      },
+      "attr": {
+        "style": {
+          "background": "#E0E0E0"
+        },
+        "collapsed": true
+      }
+    },
+    "-3": {
+      "title": "Test",
+      "id": 82,
+      "ideas": {
+        "2": {
+          "title": "Jasmine als Testframework",
+          "id": 114
+        },
+        "3": {
+          "title": "Karma als Testrunner",
+          "id": 115,
+          "ideas": {
+            "1": {
+              "title": "grunt karma",
+              "id": 113,
+              "attr": {
+                "style": {
+                  "background": "#E0E0E0"
+                }
+              }
+            }
+          }
+        },
+        "4": {
+          "title": "Test von Services",
+          "id": 116
+        },
+        "5": {
+          "title": "Test von Controllers",
+          "id": 117
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {
+          "background": "#E0E0E0"
+        }
+      }
+    },
+    "-4": {
+      "title": "Installationen",
+      "id": 84,
+      "ideas": {
+        "1": {
+          "title": "Node.js",
+          "id": 85,
+          "ideas": {
+            "1": {
+              "title": "Download und Install\nConfig siehe Notiz",
+              "id": 92
+            }
+          },
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<div>Download node.js von http://nodejs.org und installieren</div><div><br></div><div>npm config set proxy http://proxy.msg.de:3128</div><div>npm config set https-proxy http://proxy.msg.de:3128</div>"
+            },
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
+        },
+        "2": {
+          "title": "Grunt",
+          "id": 86,
+          "ideas": {
+            "1": {
+              "title": "npm install -g grunt",
+              "id": 93
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
+        },
+        "3": {
+          "title": "Karma",
+          "id": 87,
+          "ideas": {
+            "1": {
+              "title": "npm install -g karma",
+              "id": 91
+            }
+          }
+        },
+        "4": {
+          "title": "Batarang",
+          "id": 94,
+          "ideas": {
+            "1": {
+              "title": "Google Chrome Erweiterung zum Debuggen von AngularJS\n\nmuss über Google gesucht werden",
+              "id": 95
+            }
+          }
+        },
+        "5": {
+          "title": "NetBeans 8.0",
+          "id": 96
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {
+          "background": "#E0E0E0"
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {
+    "style": {
+      "background": "#22AAE0"
+    }
+  }
+}
