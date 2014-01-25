@@ -1,0 +1,576 @@
+{
+  "title": "JavaScript",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "Grundsätzliches",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "JavaScript ist",
+          "id": 3,
+          "ideas": {
+            "1": {
+              "title": "Objektbasiert",
+              "id": 4
+            },
+            "2": {
+              "title": "Funktional",
+              "id": 5
+            }
+          }
+        },
+        "2": {
+          "title": "Literale",
+          "id": 6,
+          "ideas": {
+            "5": {
+              "title": "Alles kann als Literal geschrieben werden. Es gibt keine Notwendigkeit, z.B. erst eine Klasse zu erzeugen und diese zu instantiieren",
+              "id": 11,
+              "ideas": {
+                "1": {
+                  "title": "String Literal",
+                  "id": 7,
+                  "attr": {
+                    "style": {
+                      "background": "#E0E0E0"
+                    },
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "var s = \"Hello\";"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Function Literal",
+                  "id": 10,
+                  "attr": {
+                    "style": {
+                      "background": "#E0E0E0"
+                    },
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "var funct01 = function (a, b) {<div>&nbsp; return a+b;</div><div>};</div>"
+                    }
+                  }
+                },
+                "1.5": {
+                  "title": "Number Literal",
+                  "id": 8,
+                  "attr": {
+                    "style": {
+                      "background": "#E0E0E0"
+                    },
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "var i = 500;"
+                    }
+                  }
+                },
+                "1.75": {
+                  "title": "Objekt Literal",
+                  "id": 9,
+                  "attr": {
+                    "style": {
+                      "background": "#E0E0E0"
+                    },
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "var obj = {<div>&nbsp; property1: \"Hello\",</div><div>&nbsp; method1 : function (a, b) {</div><div>&nbsp; &nbsp; return a+b;</div><div>&nbsp; }</div><div>};</div>"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {
+          "background": "#E0E0E0"
+        }
+      }
+    },
+    "2": {
+      "title": "Functions",
+      "id": 22,
+      "ideas": {
+        "1": {
+          "title": "Functions und this",
+          "id": 12,
+          "ideas": {
+            "1": {
+              "title": "es gibt 4 Kontexte, in denen Funktionen arbeiten können. Zwei davon sind wichtig, einer sollte nicht verwendet werden und einer ist esoterisch.",
+              "id": 13,
+              "ideas": {
+                "1": {
+                  "title": "Methode: function in einem Objekt",
+                  "id": 14,
+                  "ideas": {
+                    "1": {
+                      "title": "this zeigt auf das Objekt",
+                      "id": 15
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Funktion: function ist entweder global oder innerhalb einer anderen function definiert",
+                  "id": 16,
+                  "ideas": {
+                    "1": {
+                      "title": "this zeigt auf das globale Objekt",
+                      "id": 17
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Constructor: function wird mit new aufgerufen und erzeugt ein Objekt.",
+                  "id": 18,
+                  "ideas": {
+                    "1": {
+                      "title": "this zeigt auf das neue Objekt",
+                      "id": 19
+                    }
+                  }
+                },
+                "4": {
+                  "title": "Apply-Pattern: esotherisch",
+                  "id": 20,
+                  "ideas": {
+                    "1": {
+                      "title": "this zeigt auf was man will",
+                      "id": 21
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#E0E0E0"
+            },
+            "collapsed": true
+          }
+        },
+        "2": {
+          "title": "Constructor Functions",
+          "id": 23,
+          "ideas": {
+            "1": {
+              "title": "sollten gross geschrieben werden",
+              "id": 24
+            },
+            "2": {
+              "title": "müssen mit 'new' aufgerufen werden",
+              "id": 25
+            },
+            "3": {
+              "title": "wenn sie kein eigenes Objekt zurückliefern, dann wird ein leeres Objekt erzeugt",
+              "id": 26,
+              "ideas": {
+                "1": {
+                  "title": "wie alle Objekte in JS hat es keinen Typ",
+                  "id": 27
+                },
+                "2": {
+                  "title": "der Prototyp des Objekts ist der Prototyp der Constructor Function",
+                  "id": 28
+                },
+                "3": {
+                  "title": "in der Constructor Functions zeigt 'this' auf das neue Objekt. Hier können objektprivate properties und Methoden zugewiesen werden.",
+                  "id": 29
+                },
+                "4": {
+                  "title": "Properties und Methoden, die alle von einer Constructor Function erzeugten Objekte haben sollen, müssen dem Prototyp der Funktion zugewiesen werden",
+                  "id": 30
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
+        }
+      },
+      "attr": {
+        "style": {
+          "background": "#E0E0E0"
+        },
+        "collapsed": true
+      }
+    },
+    "3": {
+      "title": "Scope",
+      "id": 39,
+      "ideas": {
+        "1": {
+          "title": "JavaScript kennt keine Block-Scope.\nJavaScript hat Function-Scope",
+          "id": 40
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {
+          "background": "#E0E0E0"
+        }
+      }
+    },
+    "-1": {
+      "title": "Exception Handling",
+      "id": 31,
+      "ideas": {
+        "1": {
+          "title": "Eine Exception ist ein Objekt mit einem 'name' und einer 'message'",
+          "id": 32
+        },
+        "2": {
+          "title": "throw",
+          "id": 33
+        },
+        "3": {
+          "title": "try-catch",
+          "id": 34,
+          "ideas": {
+            "1": {
+              "title": "es gibt nur genau ein 'catch' pro 'try'",
+              "id": 35
+            }
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {
+          "background": "#E0E0E0"
+        }
+      }
+    },
+    "-2": {
+      "title": "Bibliotheken",
+      "id": 36,
+      "ideas": {
+        "1": {
+          "title": "underscore.js",
+          "id": 37
+        }
+      },
+      "attr": {
+        "style": {
+          "background": "#E0E0E0"
+        }
+      }
+    },
+    "-3": {
+      "title": "Objekterzeugung und Vererbung",
+      "id": 41,
+      "ideas": {
+        "1": {
+          "title": "klassisch OO",
+          "id": 42,
+          "ideas": {
+            "1": {
+              "title": "Statt einer Klasse wird eine Constructor Function erzeugt",
+              "id": 53
+            },
+            "2": {
+              "title": "Diese erzeugt ein neues Objekt und kann auf dessen Properties zugreifen.",
+              "id": 54
+            },
+            "3": {
+              "title": "Es kann ein Prototyp gesetzt werden",
+              "id": 55
+            },
+            "4": {
+              "title": "Vorteil: es ähnelt OO",
+              "id": 56
+            },
+            "5": {
+              "title": "Nachteil: im Detail ganz schön seltsam. Es gibt keine Klassen, warum sollte man also soetwas nachbauen?",
+              "id": 57
+            },
+            "6": {
+              "title": "Beispiel",
+              "id": 58,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<div>var Mamal = function (name) {</div><div>&nbsp; this.name = name;</div><div>};</div><div><br></div><div>Mamal.prototype.getName = function () {</div><div>&nbsp; return this.name;</div><div>};</div><div><br></div><div>var Cat = function (name) {</div><div>&nbsp; this.name = name;</div><div>};</div><div><br></div><div>Cat.prototype = new Mamal();</div><div><br></div><div>var mamal1 = new Mamal(\"Herb the mamal\");</div><div>var cat1 = new Cat(\"Henry the cat\");</div><div><br></div><div>console.log(mamal1.getName());</div><div>console.log(cat1.getName());</div>"
+                },
+                "style": {
+                  "background": "#E0E0E0"
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#E0E0E0"
+            },
+            "collapsed": true
+          }
+        },
+        "2": {
+          "title": "Prototypisch",
+          "id": 43,
+          "ideas": {
+            "1": {
+              "title": "bedeutet, dass ein Objekt auf Basis eines anderen Objekts erzeugt wird.\nDas andere Objekt heisst 'Prototyp'",
+              "id": 45
+            },
+            "2": {
+              "title": "kann auf die Methoden des Prototyp zugreifen",
+              "id": 46
+            },
+            "3": {
+              "title": "kann lesend auf Properties des Prototyp zugreifen",
+              "id": 48
+            },
+            "4": {
+              "title": "Beim schreibenden Zugriff wird nur das neue Objekt verändert, nicht der Prototyp",
+              "id": 49
+            },
+            "5": {
+              "title": "Nachteil: alles ist public",
+              "id": 50
+            },
+            "6": {
+              "title": "Vorteil: kommt fast ohne Constructor Function aus.",
+              "id": 51
+            },
+            "7": {
+              "title": "Beispiel",
+              "id": 52,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<div>var mamal = {</div><div>&nbsp; name: \"Herb the mamal\",</div><div>&nbsp; getName: function () {</div><div>&nbsp; &nbsp; return this.name;</div><div>&nbsp; }</div><div>};</div><div><br></div><div>var create = function (prototype) {</div><div>&nbsp; var Creator = function (){};</div><div>&nbsp; Creator.prototype = prototype;</div><div>&nbsp; return new Creator();</div><div>};</div><div><br></div><div>var cat = create(mamal);</div><div>cat.name = \"Henry the cat\";</div><div><br></div><div>console.log(mamal.getName());</div><div>console.log(cat.getName());</div>"
+                },
+                "style": {
+                  "background": "#E0E0E0"
+                }
+              }
+            },
+            "6.5": {
+              "title": "Vorteil: Methoden-Objekte werden nur einmal angelegt, wenn alle den selben Prototyp verwenden",
+              "id": 64
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#E0E0E0"
+            },
+            "collapsed": true
+          }
+        },
+        "3": {
+          "title": "Funktional",
+          "id": 44,
+          "ideas": {
+            "1": {
+              "title": "Ein Objekt wird auf Basis eines Spezifikationsobjekts erstellt (nur Parameter, keine Methoden)",
+              "id": 59
+            },
+            "3": {
+              "title": "Vorteil: es gibt private Daten und Konstruktoren können verrerbt werden. Und man kommt ohne 'new' aus.",
+              "id": 61
+            },
+            "4": {
+              "title": "Nachteil: ungewohnt wg. fehlendem 'new'",
+              "id": 62
+            },
+            "9": {
+              "title": "Nachteil: jedes Objekt erhält eigene Methodeninstanzen. Methoden-Objekte werden also unnötig oft erzeugt.",
+              "id": 63
+            },
+            "14": {
+              "title": "Beispiel",
+              "id": 60,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<div>var mamal = function (name) {</div><div>&nbsp; var that = {};</div><div>&nbsp;&nbsp;</div><div>&nbsp; that.getName = function () {</div><div>&nbsp; &nbsp; return name;</div><div>&nbsp; };</div><div>&nbsp;&nbsp;</div><div>&nbsp; return that;</div><div>};</div><div><br></div><div>var cat = function (name) {</div><div>&nbsp; var that = mamal(name);</div><div>&nbsp; var say = \"Say Hello!\";</div><div>&nbsp;&nbsp;</div><div>&nbsp; that.say = function () {</div><div>&nbsp; &nbsp; return say;</div><div>&nbsp; };</div><div>&nbsp;&nbsp;</div><div>&nbsp; return that;</div><div>};</div><div><br></div><div>var mamal1 = mamal(\"Herb the mamal\");</div><div>var cat1 = cat(\"Henry the cat\");</div><div><br></div><div>console.log(mamal1.getName());</div><div>console.log(cat1.getName());</div><div>console.log(cat1.say());</div><div><br></div><div><br></div><div><br></div><div>&nbsp;&nbsp;</div>"
+                },
+                "style": {
+                  "background": "#E0E0E0"
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#E0E0E0"
+            },
+            "collapsed": true
+          }
+        },
+        "4": {
+          "title": "Bewertung",
+          "id": 65,
+          "ideas": {
+            "5": {
+              "title": "Ich kann mit oder ohne Protoype bei Objekten arbeiten.",
+              "id": 93,
+              "ideas": {
+                "1": {
+                  "title": "ohne Prototype",
+                  "id": 94,
+                  "ideas": {
+                    "1": {
+                      "title": "Stil ist funktionaler",
+                      "id": 96
+                    },
+                    "2": {
+                      "title": "es ist leicht, Objekte mit privaten Properties zu erzeugen",
+                      "id": 97
+                    },
+                    "3": {
+                      "title": "braucht viel mehr Speicher, da ähnliche Objekte keine Gemeinsamkeiten teilen",
+                      "id": 98,
+                      "ideas": {
+                        "1": {
+                          "title": "es gibt keine geteilten Properties",
+                          "id": 99
+                        },
+                        "2": {
+                          "title": "es gibt keine gemeinsamen Methoden. Jedes Objekt hat für jede seiner Methoden ein eigenes Methoden-Objekt",
+                          "id": 100
+                        }
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "mit Prototype",
+                  "id": 95,
+                  "ideas": {
+                    "1": {
+                      "title": "braucht viel weniger Speicher, da zumindest Methoden über den Prototyp geteilt werden können",
+                      "id": 101
+                    },
+                    "2": {
+                      "title": "dafür muss man aber mit constructor-functions arbeiten",
+                      "id": 102
+                    },
+                    "3": {
+                      "title": "Methoden im Prototype können nur auf public Properties der Objekte zugreifen ==> kein Information Hiding",
+                      "id": 103
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Speicheranalyse",
+                  "id": 79,
+                  "ideas": {
+                    "1": {
+                      "title": "1 Mio Objekte (ein String, erst 1 Methode, dann 2 Methoden)",
+                      "id": 80,
+                      "ideas": {
+                        "1": {
+                          "title": "Prototypisch: 16 Byte pro Objekt, egal wie viel Methoden",
+                          "id": 81
+                        },
+                        "2": {
+                          "title": "Funktional: 96 Byte pro Objekt mit 1 Methode, 132 Byte pro Objekt mit 2 Methoden",
+                          "id": 82
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {
+                      "background": "#E0E0E0"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {
+                  "background": "#E0E0E0"
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#E0E0E0"
+            },
+            "collapsed": true
+          }
+        },
+        "5": {
+          "title": "Besonderheiten",
+          "id": 83,
+          "ideas": {
+            "1": {
+              "title": "Prototyp",
+              "id": 84,
+              "ideas": {
+                "1": {
+                  "title": "Der Prototyp eines Objekts ist ein verstecktes Property (__prototype__)",
+                  "id": 85
+                },
+                "2": {
+                  "title": "Nur an Funktionen ist das Property zugänglich (prototype)",
+                  "id": 86
+                },
+                "3": {
+                  "title": "Wenn eine Funktion als constructor function verwendet wird, dann wird am erzeugten Objekt folgendes gesetzt",
+                  "id": 87,
+                  "ideas": {
+                    "1": {
+                      "title": "obj.constructor === Funktion",
+                      "id": 88
+                    },
+                    "2": {
+                      "title": "obj.__prototype__ === Funktion.prototype",
+                      "id": 89,
+                      "ideas": {
+                        "1": {
+                          "title": "ACHTUNG! es wird KEINE Referenz auf die Referenz Funktion.prototype gespeichert",
+                          "id": 90
+                        },
+                        "2": {
+                          "title": "bei einem einmal erzeugten Objekt ändert sich der Prototyp nicht, wenn ich den Prototyp an der Funktion austausche",
+                          "id": 91
+                        }
+                      }
+                    }
+                  }
+                },
+                "2.5": {
+                  "title": "trotzdem hat eine Funktion einen (__prototype__) der mit (prototype) nichts zu tun hat, sondern auf das Objekt Funktion verweist.",
+                  "id": 92
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {
+                  "background": "#E0E0E0"
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#E0E0E0"
+            },
+            "collapsed": true
+          }
+        }
+      },
+      "attr": {
+        "style": {
+          "background": "#E0E0E0"
+        }
+      }
+    }
+  },
+  "links": []
+}
