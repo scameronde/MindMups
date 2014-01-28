@@ -720,16 +720,48 @@
             "1": {
               "title": "wird erweitert von AngularJS um Tests von AngularJS-Apps zu erleichtern",
               "id": 142
-            }
-          }
-        },
-        "3": {
-          "title": "Karma als Testrunner",
-          "id": 115,
-          "ideas": {
-            "1": {
-              "title": "grunt karma",
-              "id": 113,
+            },
+            "2": {
+              "title": "Test von Services",
+              "id": 116,
+              "ideas": {},
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<div>Der Service</div><div>-----------------</div>angular.module('archive'), []).factory('notificationArchive', function() {...};);<div><br></div><div><br></div><div>Der Test</div><div>--------------</div><div>describe('dies ist ein Test', function() {</div><div>&nbsp; var myNotificationArchive;</div><div>&nbsp; beforeEach(<b>module</b>('archive'));</div><div>&nbsp; beforeEach(<b>inject </b>(function (<b>_notificationArchive_</b>) {</div><div>&nbsp; &nbsp; myNotificationArchive = _notificationArchive_;</div><div>&nbsp; }));</div><div><br></div><div>&nbsp; it('should do something', function() {</div><div>&nbsp; &nbsp;&nbsp;myNotificationArchive.ddsdsdsd();</div><div><br></div><div>&nbsp; &nbsp; &nbsp;expect(myNotificationArchive.aaas()).toContain(asdasd);</div><div>&nbsp; });</div><div>});</div><div><br></div><div><br></div><div><b>module </b>lädt ein Module</div><div><b>inject </b>macht DI</div><div><b>_notificationArchive_ </b>mit den Underscores sagt dem Module, dass es ein Bean mit dem Namen ohne Underscores haben will.</div>"
+                },
+                "style": {
+                  "background": "#E0E0E0"
+                }
+              }
+            },
+            "3": {
+              "title": "Test von Controllers",
+              "id": 117,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "schlag im Buch nach. Das ist alles andere als intuitiv"
+                },
+                "style": {
+                  "background": "#E0E0E0"
+                }
+              }
+            },
+            "4": {
+              "title": "Karma als Testrunner",
+              "id": 115,
+              "ideas": {
+                "1": {
+                  "title": "grunt karma",
+                  "id": 113,
+                  "attr": {
+                    "style": {
+                      "background": "#E0E0E0"
+                    }
+                  }
+                }
+              },
               "attr": {
                 "style": {
                   "background": "#E0E0E0"
@@ -738,29 +770,26 @@
             }
           }
         },
-        "4": {
-          "title": "Test von Services",
-          "id": 116,
-          "ideas": {},
-          "attr": {
-            "attachment": {
-              "contentType": "text/html",
-              "content": "<div>Der Service</div><div>-----------------</div>angular.module('archive'), []).factory('notificationArchive', function() {...};);<div><br></div><div><br></div><div>Der Test</div><div>--------------</div><div>describe('dies ist ein Test', function() {</div><div>&nbsp; var myNotificationArchive;</div><div>&nbsp; beforeEach(<b>module</b>('archive'));</div><div>&nbsp; beforeEach(<b>inject </b>(function (<b>_notificationArchive_</b>) {</div><div>&nbsp; &nbsp; myNotificationArchive = _notificationArchive_;</div><div>&nbsp; }));</div><div><br></div><div>&nbsp; it('should do something', function() {</div><div>&nbsp; &nbsp;&nbsp;myNotificationArchive.ddsdsdsd();</div><div><br></div><div>&nbsp; &nbsp; &nbsp;expect(myNotificationArchive.aaas()).toContain(asdasd);</div><div>&nbsp; });</div><div>});</div><div><br></div><div><br></div><div><b>module </b>lädt ein Module</div><div><b>inject </b>macht DI</div><div><b>_notificationArchive_ </b>mit den Underscores sagt dem Module, dass es ein Bean mit dem Namen ohne Underscores haben will.</div>"
+        "3": {
+          "title": "Protractor als Integration-Testframework",
+          "id": 143,
+          "ideas": {
+            "1": {
+              "title": "basiert auf Selenium",
+              "id": 144
             },
-            "style": {
-              "background": "#E0E0E0"
+            "2": {
+              "title": "ist noch in Entwicklung: https://github.com/angular/protractor",
+              "id": 145
             }
           }
-        },
-        "5": {
-          "title": "Test von Controllers",
-          "id": 117
         }
       },
       "attr": {
         "style": {
           "background": "#E0E0E0"
-        }
+        },
+        "collapsed": true
       }
     },
     "-4": {
