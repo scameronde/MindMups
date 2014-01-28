@@ -454,7 +454,8 @@
                   "attr": {
                     "style": {
                       "background": "#E0E0E0"
-                    }
+                    },
+                    "collapsed": true
                   }
                 },
                 "2": {
@@ -493,6 +494,21 @@
                     "1": {
                       "title": "jede Menge Utility-Functions, die Elemente in anderen Standardelementen registrieren unter Verwendung von DI.\nz.B. Controller, Filter, etc.",
                       "id": 78
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {
+                      "background": "#E0E0E0"
+                    }
+                  }
+                },
+                "6": {
+                  "title": "Ein File - Ein Modul",
+                  "id": 140,
+                  "attr": {
+                    "style": {
+                      "background": "#E0E0E0"
                     }
                   }
                 },
@@ -539,10 +555,10 @@
                     }
                   },
                   "attr": {
-                    "collapsed": true,
                     "style": {
                       "background": "#E0E0E0"
-                    }
+                    },
+                    "collapsed": true
                   }
                 }
               },
@@ -555,15 +571,14 @@
             }
           },
           "attr": {
-            "collapsed": true,
             "style": {
               "background": "#E0E0E0"
-            }
+            },
+            "collapsed": true
           }
         }
       },
       "attr": {
-        "collapsed": true,
         "style": {
           "background": "#E0E0E0"
         }
@@ -699,8 +714,14 @@
       "id": 82,
       "ideas": {
         "2": {
-          "title": "Jasmine als Testframework",
-          "id": 114
+          "title": "Jasmine als Unit-Testframework",
+          "id": 114,
+          "ideas": {
+            "1": {
+              "title": "wird erweitert von AngularJS um Tests von AngularJS-Apps zu erleichtern",
+              "id": 142
+            }
+          }
         },
         "3": {
           "title": "Karma als Testrunner",
@@ -719,7 +740,17 @@
         },
         "4": {
           "title": "Test von Services",
-          "id": 116
+          "id": 116,
+          "ideas": {},
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<div>Der Service</div><div>-----------------</div>angular.module('archive'), []).factory('notificationArchive', function() {...};);<div><br></div><div><br></div><div>Der Test</div><div>--------------</div><div>describe('dies ist ein Test', function() {</div><div>&nbsp; var myNotificationArchive;</div><div>&nbsp; beforeEach(<b>module</b>('archive'));</div><div>&nbsp; beforeEach(<b>inject </b>(function (<b>_notificationArchive_</b>) {</div><div>&nbsp; &nbsp; myNotificationArchive = _notificationArchive_;</div><div>&nbsp; }));</div><div><br></div><div>&nbsp; it('should do something', function() {</div><div>&nbsp; &nbsp;&nbsp;myNotificationArchive.ddsdsdsd();</div><div><br></div><div>&nbsp; &nbsp; &nbsp;expect(myNotificationArchive.aaas()).toContain(asdasd);</div><div>&nbsp; });</div><div>});</div><div><br></div><div><br></div><div><b>module </b>lädt ein Module</div><div><b>inject </b>macht DI</div><div><b>_notificationArchive_ </b>mit den Underscores sagt dem Module, dass es ein Bean mit dem Namen ohne Underscores haben will.</div>"
+            },
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
         },
         "5": {
           "title": "Test von Controllers",
@@ -727,7 +758,6 @@
         }
       },
       "attr": {
-        "collapsed": true,
         "style": {
           "background": "#E0E0E0"
         }
@@ -797,10 +827,10 @@
         }
       },
       "attr": {
-        "collapsed": true,
         "style": {
           "background": "#E0E0E0"
-        }
+        },
+        "collapsed": true
       }
     }
   },
