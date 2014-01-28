@@ -212,13 +212,51 @@
         "1": {
           "title": "JavaScript kennt keine Block-Scope.\nJavaScript hat Function-Scope",
           "id": 40
+        },
+        "2": {
+          "title": "this",
+          "id": 104,
+          "ideas": {
+            "1": {
+              "title": "this in einer Funktion zeigt auf das globale Objekt",
+              "id": 105
+            },
+            "2": {
+              "title": "this in einer Funktion, die einem Obekt zugeordnet ist (Methode) zeigt auf das Objekt",
+              "id": 106
+            },
+            "3": {
+              "title": "eine Funktion ist ein Objekt und kann Properties und Methoden haben (oh mann)",
+              "id": 108,
+              "ideas": {
+                "1": {
+                  "title": "trotzdem zeigt this der Methode auf das globale Objekt",
+                  "id": 109
+                },
+                "2": {
+                  "title": "allerdings zeigt this einer Methode einer Funktion auf das Funktionsobjekt",
+                  "id": 110
+                }
+              }
+            },
+            "1.5": {
+              "title": "this in einer Funktion, die in einer Funktion steckt, zeigt auch auf das globale Objekt",
+              "id": 107
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
         }
       },
       "attr": {
-        "collapsed": true,
         "style": {
           "background": "#E0E0E0"
-        }
+        },
+        "collapsed": true
       }
     },
     "-1": {
@@ -568,7 +606,8 @@
       "attr": {
         "style": {
           "background": "#E0E0E0"
-        }
+        },
+        "collapsed": true
       }
     }
   },
