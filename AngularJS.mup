@@ -581,7 +581,8 @@
       "attr": {
         "style": {
           "background": "#E0E0E0"
-        }
+        },
+        "collapsed": true
       }
     },
     "5": {
@@ -767,6 +768,58 @@
                   "background": "#E0E0E0"
                 }
               }
+            },
+            "0.5": {
+              "title": "Was ist Jasmin?",
+              "id": 151,
+              "ideas": {
+                "1": {
+                  "title": "Jasmin ist erst einmal nichts, als eine einfache JS-Bibliothek.",
+                  "id": 148,
+                  "attr": {
+                    "style": {
+                      "background": "#E0E0E0"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "muss entweder in einer HTML-Seite oder von node.js gestartet werden",
+                  "id": 149,
+                  "attr": {
+                    "style": {
+                      "background": "#E0E0E0"
+                    }
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "in einer HTML-Seite muss ausser den Tests kein Start-Up Code stehen",
+                      "id": 152
+                    }
+                  }
+                }
+              }
+            },
+            "0.75": {
+              "title": "Was ist Karma?",
+              "id": 153,
+              "ideas": {
+                "1": {
+                  "title": "Karma ist ein Testrunner.",
+                  "id": 154
+                },
+                "2": {
+                  "title": "er scanned Directories auf geänderte Files und lässt dann Tests laufen",
+                  "id": 155
+                },
+                "3": {
+                  "title": "Er kann mit jeder Testbibliothek - auch Jasmine - arbeiten",
+                  "id": 156
+                },
+                "4": {
+                  "title": "Karma führt die Tests auf beliebigen Zielsystemen aus - auch im Browser",
+                  "id": 157
+                }
+              }
             }
           }
         },
@@ -788,8 +841,7 @@
       "attr": {
         "style": {
           "background": "#E0E0E0"
-        },
-        "collapsed": true
+        }
       }
     },
     "-4": {
@@ -861,6 +913,10 @@
         },
         "collapsed": true
       }
+    },
+    "-5": {
+      "title": "Server",
+      "id": 146
     }
   },
   "links": [],
