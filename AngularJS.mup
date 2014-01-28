@@ -761,6 +761,18 @@
                       "background": "#E0E0E0"
                     }
                   }
+                },
+                "2": {
+                  "title": "karma init\nerzeugt neue Config-Datei",
+                  "id": 158
+                },
+                "3": {
+                  "title": "karma start\nstartet karma. Scanned jetzt immer Fileänderungen!",
+                  "id": 159
+                },
+                "4": {
+                  "title": "Karma mit Jasmine ist einfach nur genial!",
+                  "id": 160
                 }
               },
               "attr": {
@@ -834,6 +846,12 @@
             "2": {
               "title": "ist noch in Entwicklung: https://github.com/angular/protractor",
               "id": 145
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {
+              "background": "#E0E0E0"
             }
           }
         }
